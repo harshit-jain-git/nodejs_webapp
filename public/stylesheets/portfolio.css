@@ -1,0 +1,15 @@
+body {
+	background-image: url(images/vision.jpg);
+	background-position:dynamic;
+}
+h4,h3,h2{
+	color: darkred;
+}
+#first{
+	font-size: 20px;
+	color: #5AF705;
+}
+p{
+	color: #5AF705;
+	font-family: Courier New;
+}
