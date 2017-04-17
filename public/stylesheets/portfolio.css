@@ -3,13 +3,13 @@ body {
 	background-position:dynamic;
 }
 h4,h3,h2{
-	color: darkred;
+	color: gold;
 }
 #first{
 	font-size: 20px;
 	color: #5AF705;
 }
 p{
-	color: #5AF705;
+	color: gold;
 	font-family: Courier New;
 }
