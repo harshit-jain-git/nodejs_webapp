@@ -1,15 +1,26 @@
 body {
-	background-image: url(images/vision.jpg);
-	background-position:dynamic;
+    background-image: url(images/vision.jpg);
+    position: fixed;
 }
-h4,h3,h2{
-	color: gold;
+
+.portfolio_header{
+    width : 100%;
+    color:red;
+    text-align:center;
+    background-image: linear-gradient(to bottom, blue, magenta, blue);
 }
-#first{
-	font-size: 20px;
-	color: #5AF705;
+
+.About_me{
+    text-align:center;
+    color:#F74E05;
+    width : 100%;
 }
-p{
-	color: gold;
-	font-family: Courier New;
+
+.skills{
+    width:100%;
+    text-align:center;
+}
+
+.footer{
+    color: white;
 }
