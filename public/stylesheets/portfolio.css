@@ -5,6 +5,10 @@ body {
     min-height: 100%;
 }
 
+.header{
+    font-size: larger;
+}
+
 .nav_bar{
     width: 100%;
     position: fixed;

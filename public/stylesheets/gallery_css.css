@@ -5,6 +5,10 @@ body {
     background-size: cover;
 }
 
+.header{
+    font-size: larger;
+}
+
 .nav_bar{
     width: 100%;
     position: fixed;

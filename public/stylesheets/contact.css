@@ -6,11 +6,20 @@ body{
 }
 
 .contact .image{
-    vertical-align: middle;
+    margin-top: 5%;
     text-align: center;
 }
 
+.header{
+    font-size: larger;
+}
 
+.nav_bar{
+    width: 100%;
+    position: fixed;
+    font-size: 120%;
+    background-image: url("../images/nav_bg.jpg");
+}
 
 .contact .text .main{
     font-family: 'Montez', cursive;

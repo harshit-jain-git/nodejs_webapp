@@ -7,6 +7,17 @@ body, html{
     background-repeat: no-repeat; !important;
     background-attachment: fixed;
 }
+
+.header{
+    font-size: larger;
+}
+
+.nav_bar{
+    width: 100%;
+    position: absolute;
+    font-size: larger;
+}
+
 h1 {
     font-weight: 700;
     font-family: 'Jura', sans-serif;
