@@ -1,11 +1,11 @@
 .body_wrapper{
-    background-image : linear-gradient(to bottom, blue, magenta, blue);
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     height: 50px;
     text-align: center;
     text-decoration: none;
+    position: fixed;
 }
 
 .links{

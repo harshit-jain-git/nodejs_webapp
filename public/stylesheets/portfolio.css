@@ -1,26 +1,45 @@
 body {
-    background-image: url(images/vision.jpg);
+    background: url("../images/vision.jpg") no-repeat top center fixed;;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+}
+
+.nav_bar{
+    width: 100%;
     position: fixed;
+    font-size: 120%;
+    background-image: url("../images/nav_bg.jpg");
 }
 
 .portfolio_header{
     width : 100%;
     color:red;
     text-align:center;
-    background-image: linear-gradient(to bottom, blue, magenta, blue);
 }
 
 .About_me{
     text-align:center;
-    color:#F74E05;
+    color: aqua;
     width : 100%;
+    font-size: larger;
 }
 
 .skills{
     width:100%;
     text-align:center;
+    font-size: 150%;
+}
+
+#first{
+    color: lawngreen;
+}
+
+#header{
+    color: #c12e2a;
 }
 
 .footer{
     color: white;
+    font-size: larger;
 }

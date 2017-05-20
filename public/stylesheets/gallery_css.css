@@ -1,10 +1,20 @@
-h1 {
-    font-family: "Bradley Hand ITC";
-    font-weight: 700 ;
-    color: firebrick;
+body {
+    width: 100%;
+    min-height: 100%;
+    background: url("../images/gallery_bg.jpg") no-repeat top center fixed;
+    background-size: cover;
 }
 
-h2{
-    color: antiquewhite ;
+.nav_bar{
+    width: 100%;
+    position: fixed;
+    font-size: 120%;
+    background-image: url("../images/nav_bg.jpg");
 }
 
+#img{
+    margin: auto;
+    height: 500px;
+    width: 600px;
+    align-content: center;
+}

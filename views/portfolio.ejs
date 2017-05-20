@@ -4,9 +4,28 @@
     <title> Portfolio </title>
     <link rel="stylesheet" href="stylesheets/portfolio.css">
     <link rel="icon" href="images/favicon-96x96.ico">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDaF-tAN8TGMF9d31f4oqAyQJD-iFbdrQY">
+
 </head>
 <body class="body_wrapper">
-<% include templates/navigation.ejs %>
+
+<div>
+    <header class="nav_bar">
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/portfolio">Portfolio</a></li>
+            <li role="presentation"><a href="/career">Career</a></li>
+            <li role="presentation"><a href="/gallery">Gallery</a></li>
+            <li role="presentation"><a href="/resume">Resume</a></li>
+            <li role="presentation"><a href="/resume">Contact</a></li>
+        </ul>
+    </header>
+</div>
+<br><br>
+
 <div class="main-content_wrapper">
     <div class = "portfolio_header">
         <h1> Portfolio </h1>
@@ -21,27 +40,34 @@
     </div>
     <div class="skills">
         <div class="interests">
-            <h2> My Interests - </h2>
+            <h2 id="header"> My Interests - </h2>
             <p id="first"> Web design <br>
                 Android app development <br>
                 Cyber security <br>
             </p>
         </div>
         <div class="Languages">
-            <h2> Languages I know </h2>
-            <p id="first"> C, Python, Javascript, PHP, HTML, CSS, BootStrap </p>
+            <h2 id="header"> Languages I know </h2>
+            <p id="first"> C, C++, Python, Javascript, PHP, HTML, CSS, BootStrap </p>
         </div>
+
+        <div class="Frameworks">
+            <h2 id="header"> Familiar Frameworks and API's </h2>
+            <p id="first"> Django, Node.js, Express, Socket.io, Web-rtc </p>
+        </div>
+
         <div class="Softwares">
-            <h2> I can work on - </h2>
-            <p id="first"> photoshop <br>
-                Illustrator
+            <h2 id="header"> I can work on - </h2>
+            <p id="first"> Adobe Photoshop <br>
+                Adobe Illustrator <br>
+                Adobe Premiere Pro
             </p> <br>
         </div>
     </div>
 </div>
 
 <div class="footer">
-    <footer> &copy All copyrights reserved 2017 </footer>
+    <footer> &copy All Rights reserved 2017 </footer>
 </div>
 
 </body>
