@@ -6,6 +6,8 @@ body, html{
     background-size: cover;
     background-repeat: no-repeat; !important;
     background-attachment: fixed;
+    width: 100%;
+    min-height: 100%;
 }
 
 .header{
