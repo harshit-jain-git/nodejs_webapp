@@ -11,7 +11,6 @@ var career = require('./routes/career');
 var gallery = require('./routes/gallery');
 var contact = require('./routes/contact');
 var resume = require('./routes/resume');
-
 var app = express();
 
 // view engine setup
@@ -30,9 +29,8 @@ app.use('/', index);
 app.use('/portfolio', portfolio);
 app.use('/career', career);
 app.use('/gallery', gallery);
-app.use('/resume', resume);
 app.use('/contact', contact);
-
+app.use('/CV.pdf', resume);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
