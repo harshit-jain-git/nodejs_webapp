@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET resume page. */
 router.get('/', function(req, res, next) {
-    res.render('CV.pdf', { title: 'Resume' });
+    res.render('resume', { title: 'Resume' });
 });
 
 module.exports = router;
