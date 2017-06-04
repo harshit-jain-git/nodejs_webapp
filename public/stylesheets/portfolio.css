@@ -19,14 +19,30 @@ body {
 .portfolio_header{
     width : 100%;
     color:red;
+    font-family: 'Copse', serif;
     text-align:center;
 }
 
 .About_me{
+
     text-align:center;
-    color: aqua;
+    color: #bce8f1;
     width : 100%;
     font-size: larger;
+}
+
+.image img{
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.image:hover img{
+    opacity: .5;
+}
+
+.text{
+    font-family: 'Alegreya', serif;
 }
 
 .skills{
@@ -36,14 +52,16 @@ body {
 }
 
 #first{
-    color: lawngreen;
+    color: #f7e1b5;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #header{
-    color: #c12e2a;
+    color: #f0ad4e;
+    font-family: 'Josefin Slab', serif;
 }
 
 .footer{
-    color: white;
+    color: #ccc;
     font-size: larger;
 }
