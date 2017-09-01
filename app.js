@@ -1,54 +1,39 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var http = require('http'),
+    server = http.createServer(handler),
+    fs = require('fs'),
+    path = require('path'),
+    host = '127.0.0.1',
+    port = '9000';
 
-var index = require('./routes/index');
-var portfolio = require('./routes/portfolio');
-var career = require('./routes/career');
-var gallery = require('./routes/gallery');
-var contact = require('./routes/contact');
-var resume = require('./routes/resume');
-var app = express();
+var mimes = {
+    ".html" : "text/html",
+    ".css" : "text/css",
+    ".js" : "text/javascript",
+    "gif" : "image/gif",
+    ".jpg" : "image/jpeg",
+    ".png" : "image/png"
+};
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+function handler(req, res) {
+    var filepath = (req.url === '/') ? ('./index.html') : ('.' + req.url);
+    var contentType = mimes[path.extname(filepath)];
+    //Check to see if the file exists
+    fs.exists(filepath, function(file_exists) {
+        if(file_exists) {
+            res.writeHead(200, {'Content-Type' : contentType});
+            var streamFile = fs.createReadStream(filepath).pipe(res);
 
+            streamFile.on('error', function(){
+                res.writeHead(500);
+                res.end();
+            })
+        } else {
+            res.writeHead(404);
+            res.end("Sorry we could not find the file you asked for");
+        }
+    })
+}
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', index);
-app.use('/portfolio', portfolio);
-app.use('/career', career);
-app.use('/gallery', gallery);
-app.use('/contact', contact);
-app.use('/resume', resume);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+server.listen(port, host, function() {
+    console.log('Server Running on http://' + host + ':' + port);
 });
-
-// error handler
-app.use(function(err, req, res, next) {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
-});
-
-module.exports = app;

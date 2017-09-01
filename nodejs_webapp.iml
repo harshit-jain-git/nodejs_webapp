@@ -10,5 +10,6 @@
     <orderEntry type="library" name="CanvasRenderer" level="application" />
     <orderEntry type="library" name="stats" level="application" />
     <orderEntry type="library" name="Bird" level="application" />
+    <orderEntry type="library" name="e335db187c" level="application" />
   </component>
 </module>
