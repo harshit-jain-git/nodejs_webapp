@@ -2,8 +2,7 @@ var http = require('http'),
     server = http.createServer(handler),
     fs = require('fs'),
     path = require('path'),
-    host = '127.0.0.1',
-    port = '9000';
+    host = '127.0.0.1';
 
 var mimes = {
     ".html" : "text/html",
@@ -34,6 +33,6 @@ function handler(req, res) {
     })
 }
 
-server.listen(port, host, function() {
-    console.log('Server Running on http://' + host + ':' + port);
+server.listen(process.env.PORT || 5000, host, function() {
+    console.log('Server Running on http://' + host + ':' + 'port');
 });
