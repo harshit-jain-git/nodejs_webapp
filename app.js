@@ -2,7 +2,8 @@ var http = require('http'),
     server = http.createServer(handler),
     fs = require('fs'),
     path = require('path'),
-    host = '127.0.0.1';
+    host = '127.0.0.1',
+    port = normalizePort(process.env.PORT || '3000');
 
 var mimes = {
     ".html" : "text/html",
@@ -12,6 +13,9 @@ var mimes = {
     ".jpg" : "image/jpeg",
     ".png" : "image/png"
 };
+
+server.listen(port);
+
 
 function handler(req, res) {
     var filepath = (req.url === '/') ? ('./index.html') : ('.' + req.url);
@@ -33,6 +37,18 @@ function handler(req, res) {
     })
 }
 
-server.listen(process.env.PORT || 5000, host, function() {
-    console.log('Server Running on http://' + host + ':' + 'port');
-});
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
