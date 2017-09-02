@@ -1,17 +1,19 @@
 {
-  "name": "nodejs-webapp",
-  "version": "0.0.0",
-  "private": true,
+  "name": "nodejs_webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./app"
   },
-  "dependencies": {
-    "body-parser": "~1.17.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "ejs": "~2.5.6",
-    "express": "~4.15.2",
-    "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshitjain1371999/nodejs_webapp.git"
+  },
+  "author": "Harshit Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshitjain1371999/nodejs_webapp/issues"
+  },
+  "homepage": "https://github.com/harshitjain1371999/nodejs_webapp#readme"
 }
