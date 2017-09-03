@@ -18,7 +18,7 @@ server.listen(port);
 
 
 function handler(req, res) {
-    var filepath = (req.url === '/') ? ('./index.html') : ('.' + req.url);
+    var filepath = (req.url === '/jainharshit.git' || '/') ? ('./index.html') : ('.' + req.url);
     var contentType = mimes[path.extname(filepath)];
     //Check to see if the file exists
     fs.exists(filepath, function(file_exists) {
